@@ -409,7 +409,6 @@ h1 a:hover {
     max-width: 450px;
     height: auto;
 }
-/* textareaとimgを１：１ */
 
 .about-img img {
     width: 100%;
@@ -456,6 +455,22 @@ h1 a:hover {
 
 .more-btn:hover {
     opacity: 0.6;
+}
+
+@media screen  and (max-width:800px) {
+    .about-img {
+        width: 47%;
+        align-items: center;
+        max-width: 450px;
+        height: auto;
+    }
+    
+    .about-img img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }    
 }
 
 @media screen and (max-width:767px) {
