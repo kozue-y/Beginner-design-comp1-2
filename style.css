@@ -61,7 +61,6 @@ h1 {
      /*↑line-height追記してみる  */
      margin: 0;
      /* ↑margin:0;追記してpadding調整しやすくなるか確認 */
-    /* padding: 15px 0px; */
 }
 h1 a {
     /* ここから追加 */
@@ -78,9 +77,6 @@ h1 a {
 h1 a:hover {
     opacity: 0.6;
 }
-/* ↑flexコンテナ内では子要素marginは親要素のサイズに影響が出ないからpadding
-にする */
-/* 8→15pxに変更で揃う */
 
 .header .inner {
     max-width: 960px;
@@ -198,6 +194,7 @@ h1 a:hover {
         top: 8%;
         left: 50%;
         transform: translateX(-50%);
+        height: auto;
         font-weight: 300;
         white-space: normal;
         overflow: visible;
@@ -223,6 +220,7 @@ h1 a:hover {
             white-space: normal;
             overflow: visible;
             max-width: 84%;
+            height: auto;
             line-height: 1.2;
             text-align: center;
         }    
@@ -309,6 +307,11 @@ h1 a:hover {
    font-weight: 400; 
    text-align: center;
    margin: 22px 0px 9px 0px;
+}
+@media screen and (max-width:800px){
+    .menu-name {
+        font-size: 19px;
+    }   
 }
 .menu-description {
     font-size: 15px;
@@ -437,15 +440,20 @@ h1 a:hover {
 }
 
 .more-btn {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 250px;
+    height: 55px;
     font-size: 25px;
     font-weight: 300;
     background-color: #505050;
     color: #FFFFFF;
-    padding: 13px 90px;
+    /* padding: 13px 90px; */
     text-decoration: none;
     margin-left: 1px;
-    margin-top: 7px;
+    margin-top: 25px;
     line-height: 1;
     cursor: pointer;
     transition: all 0.3s ease 0s;
@@ -525,9 +533,13 @@ h1 a:hover {
     }
 
     .more-btn {
+        display: inline-block;
+        text-align: center;
+        height: 55px;
+        line-height: 50px;
         width: 100%;
         max-width: 315px;
-        padding: 11px 90px 16px 87px;
+        /* padding: 11px 90px 16px 87px; */
         margin: 7px 1px 2px;
         border: 1px solid #505050;
         box-sizing: border-box;
